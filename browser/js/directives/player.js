@@ -16,6 +16,10 @@ app.directive('player', function (PlayerFactory) {
 				if (PlayerFactory.isPlaying()) PlayerFactory.pause();
 				else PlayerFactory.resume();
 			};
+        },
+        controller: function(PlayerFactory, $scope){
+
+
         }
     };
 });
