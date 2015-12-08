@@ -1,6 +1,7 @@
 app.controller('PlaylistCtrl', function ($scope, thePlaylist, PlaylistFactory, PlayerFactory) {
 	
 	$scope.playlist = thePlaylist;
+	$scope.songs = thePlaylist.songs;
 	
 	$scope.addSong = function (song) {
 		return PlaylistFactory.addSong($scope.playlist._id, song)
