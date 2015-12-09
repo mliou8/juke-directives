@@ -18,8 +18,6 @@ app.directive('player', function (PlayerFactory) {
 			};
         },
         controller: function(PlayerFactory, $scope){
-
-
         }
     };
 });

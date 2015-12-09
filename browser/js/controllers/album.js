@@ -1,14 +1,8 @@
 app.controller('AlbumCtrl', function ($scope, PlayerFactory, theAlbum) {
 
 	$scope.album = theAlbum;
+	//$scope.songs = theAlbum.songs;
 
-	$scope.isCurrent = function (song) {
-		var current = PlayerFactory.getCurrentSong();
-		return current && current._id == song._id;
-	};
-	$scope.start = function (song) {
-		PlayerFactory.start(song, $scope.album.songs);
-	};
 
 	$scope.generateMailTo = function () {
 		if (!$scope.album) return;
