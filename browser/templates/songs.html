@@ -10,12 +10,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="song in songs" ng-class="{active: isCurrent(song)}">
-				<td>
-					<button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
-						<span class="glyphicon glyphicon-play"></span>
-					</button>
-				</td>
+			<tr ng-repeat="song in songs" ng-class="{active: isCurrent(song)}" double-click two-clicks="song">
 				<td>{{ song.name }}</td>
 				<td><span ng-repeat="artist in song.artists">{{ artist.name }} </span></td>
 				<td>{{ song.genres.join(', ') }}</td>
