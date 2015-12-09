@@ -4,7 +4,7 @@ app.directive('doubleClick', function () {
         scope: {
             twoClicks: '&'
         },
-        link: function (scope, element, attrs) {\
+        link: function (scope, element, attrs) {
             element.on('dblclick', function (e) {
                 scope.twoClicks();
             });

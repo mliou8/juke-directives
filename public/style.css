@@ -51,7 +51,7 @@ footer {
 [double-click] {
   -webkit-user-select: none;
   user-select: none;
-  cursor: ; }
+  cursor: pointer; }
 
 tr[double-click]:hover {
   background-color: #444; }
