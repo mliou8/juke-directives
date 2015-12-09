@@ -1,12 +1,12 @@
-app.directive('doubleClick', function (PlayerFactory) {
+app.directive('doubleClick', function () {
     return {
         restrict: 'A',
         scope: {
-            twoClicks: '='
+            twoClicks: '&'
         },
-        link: function (scope, element) {
-            element.on('dblclick', function () {
-                PlayerFactory.start(scope.song);
+        link: function (scope, element, attrs) {\
+            element.on('dblclick', function (e) {
+                scope.twoClicks();
             });
         }
     };
